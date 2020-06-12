@@ -20,7 +20,8 @@ def main():
         print(green + "Loading... Please wait" + reset)
 
         chrome_options = webdriver.ChromeOptions()
-        chrome_options.add_argument("--headless")
+        chrome_options.add_argument("--headless")   # Open browser without displaying it
+        chrome_options.add_argument("--incognito")  # Use browser in incognito mode
 
         browser = webdriver.Chrome(os.getcwd() + "/chromedriver", options=chrome_options)
 
